@@ -8,9 +8,12 @@ public class Main {
         System.out.println("""
                 1. Set Monthly Budget (Optional)
                 2. Define expenses categories
-                3. Quit
+                3. Log expenses
+                4. View expense tracker
+                5. Quit
                 """);
         int input = scanner.nextInt();
+        scanner.nextLine();
 
         switch (input) {
             case 1:
@@ -20,6 +23,10 @@ public class Main {
                 MainMenu.defineExpenses(scanner);
                 break;
             case 3:
+                MainMenu.logExpenses(scanner);
+            case 4:
+                MainMenu.viewExpenses(scanner);
+            case 5:
                 System.out.println("Thank you for using Monthly Expense Tracker!");
                 System.exit(0);
             default:
